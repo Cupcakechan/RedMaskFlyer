@@ -1,0 +1,1088 @@
+fileFormatVersion: 2
+guid: a9abad8d42842ea42901d0f98c6c61d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8557022296289031752
+    second: Hero_Super_0
+  - first:
+      213: 2326787080728486705
+    second: Hero_Super_1
+  - first:
+      213: -4894053508679099226
+    second: Hero_Super_2
+  - first:
+      213: 2442714825979725175
+    second: Hero_Super_3
+  - first:
+      213: -5190038593289228525
+    second: Hero_Super_4
+  - first:
+      213: -8712239641123444557
+    second: Hero_Super_5
+  - first:
+      213: 4391389875791190089
+    second: Hero_Super_6
+  - first:
+      213: -7665626267078887988
+    second: Hero_Super_7
+  - first:
+      213: -2715418814455515227
+    second: Hero_Super_8
+  - first:
+      213: -3784315822179848948
+    second: Hero_Super_9
+  - first:
+      213: 1903126639705167214
+    second: Hero_Super_10
+  - first:
+      213: 5667491743294008932
+    second: Hero_Super_11
+  - first:
+      213: 4029195679080750920
+    second: Hero_Super_12
+  - first:
+      213: 798810534152783746
+    second: Hero_Super_13
+  - first:
+      213: 341178914698027238
+    second: Hero_Super_14
+  - first:
+      213: -8953892539045213436
+    second: Hero_Super_15
+  - first:
+      213: -8646558642506374023
+    second: Hero_Super_16
+  - first:
+      213: -2785828049900864259
+    second: Hero_Super_17
+  - first:
+      213: 7516650239059249469
+    second: Hero_Super_18
+  - first:
+      213: -8251292889661268355
+    second: Hero_Super_19
+  - first:
+      213: -7307296411986877636
+    second: Hero_Super_20
+  - first:
+      213: 5869658000129890224
+    second: Hero_Super_21
+  - first:
+      213: 5181063927736822156
+    second: Hero_Super_22
+  - first:
+      213: -9206691501840616290
+    second: Hero_Super_23
+  - first:
+      213: -6205872220130943326
+    second: Hero_Super_24
+  - first:
+      213: -7767201177673174196
+    second: Hero_Super_25
+  - first:
+      213: -5208375920292190711
+    second: Hero_Super_26
+  - first:
+      213: 5135546351604971335
+    second: Hero_Super_27
+  - first:
+      213: 8792274243654555535
+    second: Hero_Super_28
+  - first:
+      213: 8480545775674756459
+    second: Hero_Super_29
+  - first:
+      213: -4781673494962583936
+    second: Hero_Super_30
+  - first:
+      213: 4474586125491307268
+    second: Hero_Super_31
+  - first:
+      213: 7150082787647807819
+    second: Hero_Super_32
+  - first:
+      213: -2229109907495653873
+    second: Hero_Super_33
+  - first:
+      213: -8398235115315760365
+    second: Hero_Super_34
+  - first:
+      213: 7491044233294056935
+    second: Hero_Super_35
+  - first:
+      213: -8422801966605944820
+    second: Hero_Super_36
+  - first:
+      213: 3439299553511569364
+    second: Hero_Super_37
+  - first:
+      213: 8620473044517024761
+    second: Hero_Super_38
+  - first:
+      213: 4690753146184690920
+    second: Hero_Super_39
+  - first:
+      213: -5182874088765655267
+    second: Hero_Super_40
+  - first:
+      213: -2308079823719127885
+    second: Hero_Super_41
+  - first:
+      213: 3695542361929567535
+    second: Hero_Super_42
+  - first:
+      213: -2931115962918462519
+    second: Hero_Super_43
+  - first:
+      213: -6414132231840749181
+    second: Hero_Super_44
+  - first:
+      213: -6694383364092844718
+    second: Hero_Super_45
+  - first:
+      213: -209683672764197387
+    second: Hero_Super_46
+  - first:
+      213: -6749629825132434777
+    second: Hero_Super_47
+  - first:
+      213: -6012919118658378254
+    second: Hero_Super_48
+  - first:
+      213: -4881984648083540704
+    second: Hero_Super_49
+  - first:
+      213: 8856776022227498621
+    second: Hero_Super_50
+  - first:
+      213: 1581255986569606501
+    second: Hero_Super_51
+  - first:
+      213: -2639265981595889001
+    second: Hero_Super_52
+  - first:
+      213: 5559626680247366325
+    second: Hero_Super_53
+  - first:
+      213: -5875134494586608244
+    second: Hero_Super_54
+  - first:
+      213: -6347681268838990826
+    second: Hero_Super_55
+  - first:
+      213: -6991063868962827596
+    second: Hero_Super_56
+  - first:
+      213: 3104849329861739752
+    second: Hero_Super_57
+  - first:
+      213: -1635762100197188603
+    second: Hero_Super_58
+  - first:
+      213: 3590227083057017909
+    second: Hero_Super_59
+  - first:
+      213: -3921823689172801240
+    second: Hero_Super_60
+  - first:
+      213: 3538887281121535647
+    second: Hero_Super_61
+  - first:
+      213: -2927994674083004970
+    second: Hero_Super_62
+  - first:
+      213: 6429076862569405549
+    second: Hero_Super_63
+  - first:
+      213: 6373079885362179183
+    second: Hero_Super_64
+  - first:
+      213: -5976852520033036773
+    second: Hero_Super_65
+  - first:
+      213: 8070988118793001859
+    second: Hero_Super_66
+  - first:
+      213: -4842823492791092379
+    second: Hero_Super_67
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hero_Super_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 351
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 846b7610176a0c670800000000000000
+      internalID: 8557022296289031752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 351
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1332ac6a5886a4020800000000000000
+      internalID: 2326787080728486705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 351
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ac9d6f7344d41cb0800000000000000
+      internalID: -4894053508679099226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 351
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7750a12313446e120800000000000000
+      internalID: 2442714825979725175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 351
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f6d6cb56749f7b0800000000000000
+      internalID: -5190038593289228525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 351
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b8a2c0b438e71780800000000000000
+      internalID: -8712239641123444557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 319
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948d7c053d951fc30800000000000000
+      internalID: 4391389875791190089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_7
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 321
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5fbd936893e9590800000000000000
+      internalID: -7665626267078887988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_8
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 320
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a777f3a9f4e05ad0800000000000000
+      internalID: -2715418814455515227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_9
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 319
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d64155fc86b7bc0800000000000000
+      internalID: -3784315822179848948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_10
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 321
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65953a7893496a10800000000000000
+      internalID: 1903126639705167214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_11
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 320
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46eaf7e76b9f6ae40800000000000000
+      internalID: 5667491743294008932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_36
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 162
+        width: 15
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08bdfebc323c1b80800000000000000
+      internalID: -8422801966605944820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_37
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 162
+        width: 15
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d77733c8b8dabf20800000000000000
+      internalID: 3439299553511569364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_38
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 162
+        width: 15
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3744e8f8212a770800000000000000
+      internalID: 8620473044517024761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_39
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 162
+        width: 15
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec626f3227e81140800000000000000
+      internalID: 4690753146184690920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_40
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 162
+        width: 15
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17fb8fe97bb218b0800000000000000
+      internalID: -5182874088765655267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_41
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 162
+        width: 15
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4a9f901ad08ffd0800000000000000
+      internalID: -2308079823719127885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_48
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 96
+        width: 15
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5663d5be1dd8ca0800000000000000
+      internalID: -6012919118658378254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_49
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 96
+        width: 15
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 025f11414d4bf3cb0800000000000000
+      internalID: -4881984648083540704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_50
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 96
+        width: 14
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d763114fdd699ea70800000000000000
+      internalID: 8856776022227498621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_51
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 96
+        width: 14
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565f07221ffb1f510800000000000000
+      internalID: 1581255986569606501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_52
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 96
+        width: 14
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792543bb2917f5bd0800000000000000
+      internalID: -2639265981595889001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_53
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 96
+        width: 14
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2bdef6203c72d40800000000000000
+      internalID: 5559626680247366325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_54
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 64
+        width: 17
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8565821e44577ea0800000000000000
+      internalID: -5875134494586608244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_55
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 64
+        width: 17
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c7377748188e7a0800000000000000
+      internalID: -6347681268838990826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_56
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 64
+        width: 17
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b217609370cafe90800000000000000
+      internalID: -6991063868962827596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_57
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 64
+        width: 17
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4c48be304a61b20800000000000000
+      internalID: 3104849329861739752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_58
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 64
+        width: 17
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c13b8590b9c49e0800000000000000
+      internalID: -1635762100197188603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Super_59
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 64
+        width: 17
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534b99c928c03d130800000000000000
+      internalID: 3590227083057017909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hero_Super_0: 8557022296289031752
+      Hero_Super_1: 2326787080728486705
+      Hero_Super_10: 1903126639705167214
+      Hero_Super_11: 5667491743294008932
+      Hero_Super_12: 4029195679080750920
+      Hero_Super_13: 798810534152783746
+      Hero_Super_14: 341178914698027238
+      Hero_Super_15: -8953892539045213436
+      Hero_Super_16: -8646558642506374023
+      Hero_Super_17: -2785828049900864259
+      Hero_Super_18: 7516650239059249469
+      Hero_Super_19: -8251292889661268355
+      Hero_Super_2: -4894053508679099226
+      Hero_Super_20: -7307296411986877636
+      Hero_Super_21: 5869658000129890224
+      Hero_Super_22: 5181063927736822156
+      Hero_Super_23: -9206691501840616290
+      Hero_Super_24: -6205872220130943326
+      Hero_Super_25: -7767201177673174196
+      Hero_Super_26: -5208375920292190711
+      Hero_Super_27: 5135546351604971335
+      Hero_Super_28: 8792274243654555535
+      Hero_Super_29: 8480545775674756459
+      Hero_Super_3: 2442714825979725175
+      Hero_Super_30: -4781673494962583936
+      Hero_Super_31: 4474586125491307268
+      Hero_Super_32: 7150082787647807819
+      Hero_Super_33: -2229109907495653873
+      Hero_Super_34: -8398235115315760365
+      Hero_Super_35: 7491044233294056935
+      Hero_Super_36: -8422801966605944820
+      Hero_Super_37: 3439299553511569364
+      Hero_Super_38: 8620473044517024761
+      Hero_Super_39: 4690753146184690920
+      Hero_Super_4: -5190038593289228525
+      Hero_Super_40: -5182874088765655267
+      Hero_Super_41: -2308079823719127885
+      Hero_Super_42: 3695542361929567535
+      Hero_Super_43: -2931115962918462519
+      Hero_Super_44: -6414132231840749181
+      Hero_Super_45: -6694383364092844718
+      Hero_Super_46: -209683672764197387
+      Hero_Super_47: -6749629825132434777
+      Hero_Super_48: -6012919118658378254
+      Hero_Super_49: -4881984648083540704
+      Hero_Super_5: -8712239641123444557
+      Hero_Super_50: 8856776022227498621
+      Hero_Super_51: 1581255986569606501
+      Hero_Super_52: -2639265981595889001
+      Hero_Super_53: 5559626680247366325
+      Hero_Super_54: -5875134494586608244
+      Hero_Super_55: -6347681268838990826
+      Hero_Super_56: -6991063868962827596
+      Hero_Super_57: 3104849329861739752
+      Hero_Super_58: -1635762100197188603
+      Hero_Super_59: 3590227083057017909
+      Hero_Super_6: 4391389875791190089
+      Hero_Super_60: -3921823689172801240
+      Hero_Super_61: 3538887281121535647
+      Hero_Super_62: -2927994674083004970
+      Hero_Super_63: 6429076862569405549
+      Hero_Super_64: 6373079885362179183
+      Hero_Super_65: -5976852520033036773
+      Hero_Super_66: 8070988118793001859
+      Hero_Super_67: -4842823492791092379
+      Hero_Super_7: -7665626267078887988
+      Hero_Super_8: -2715418814455515227
+      Hero_Super_9: -3784315822179848948
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
