@@ -249,8 +249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c23eb22c707584ab87d995ade7eb99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  flySpeed: 4
-  walkSpeed: 3
+  moveSpeed: 4
+  acceleration: 25
+  flySpeed: 5
+  minX: -8
+  maxX: 8
   groundCheck: {fileID: 1759772759}
   groundCheckRadius: 0.12
   groundLayer:
