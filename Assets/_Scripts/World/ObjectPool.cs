@@ -3,28 +3,40 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    [SerializeField] private GameObject prefab;
-    [SerializeField] private int initialSize = 10;
+    [Tooltip("Variant prefabs for this pool. Get() returns a random one.")]
+    [SerializeField] private GameObject[] prefabs;
+    [SerializeField] private int initialSizePerPrefab = 5;
 
-    private readonly List<GameObject> pool = new List<GameObject>();
+    private readonly List<List<GameObject>> subPools = new List<List<GameObject>>();
 
     void Awake()
     {
-        for (int i = 0; i < initialSize; i++)
-            CreateInstance();
+        if (prefabs == null) return;
+
+        foreach (GameObject prefab in prefabs)
+        {
+            var list = new List<GameObject>();
+            for (int i = 0; i < initialSizePerPrefab; i++)
+                list.Add(CreateInstance(prefab));
+            subPools.Add(list);
+        }
     }
 
-    private GameObject CreateInstance()
+    private GameObject CreateInstance(GameObject prefab)
     {
         GameObject obj = Instantiate(prefab, transform);
         obj.SetActive(false);
-        pool.Add(obj);
         return obj;
     }
 
     public GameObject Get()
     {
-        foreach (GameObject obj in pool)
+        if (prefabs == null || prefabs.Length == 0) return null;
+
+        int variant = Random.Range(0, prefabs.Length);
+        List<GameObject> list = subPools[variant];
+
+        foreach (GameObject obj in list)
         {
             if (!obj.activeInHierarchy)
             {
@@ -32,7 +44,9 @@ public class ObjectPool : MonoBehaviour
                 return obj;
             }
         }
-        GameObject grown = CreateInstance();   // pool ran dry — grow it
+
+        GameObject grown = CreateInstance(prefabs[variant]);   // grow this variant
+        list.Add(grown);
         grown.SetActive(true);
         return grown;
     }
