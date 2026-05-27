@@ -286,6 +286,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838276151}
+  - {fileID: 1377922345}
+  - {fileID: 1114744036}
+  - {fileID: 1055501193}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &219787018
@@ -1303,8 +1306,8 @@ MonoBehaviour:
     unlockAtMeters: 200
     lockAtMeters: 0
   spawnX: 11
-  minInterval: 3
-  maxInterval: 9
+  minInterval: 2
+  maxInterval: 5
   warningInstance: {fileID: 1402031307}
   warningX: 7.5
 --- !u!4 &815102867
@@ -1333,7 +1336,7 @@ GameObject:
   - component: {fileID: 838276151}
   - component: {fileID: 838276152}
   m_Layer: 0
-  m_Name: Cave
+  m_Name: Starter_ObstaclesPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1411,7 +1414,7 @@ MonoBehaviour:
     flyYMin: 0
     flyYMax: 0
     warningDuration: 0
-    unlockAtMeters: 100
+    unlockAtMeters: 0
     lockAtMeters: 0
   spawnX: 11
   minInterval: 3
@@ -1433,6 +1436,204 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &939369916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 939369918}
+  - component: {fileID: 939369917}
+  m_Layer: 0
+  m_Name: BiomeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &939369917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939369916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728270d5412784498b7479b89c6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BiomeManager
+  starterBiome:
+    biomeName: Starter
+    entries:
+    - name: Starter
+      pool: {fileID: 838276152}
+      weight: 1
+      groundY: -4.06
+      isFlying: 0
+      flyYMin: 0
+      flyYMax: 0
+      warningDuration: 0
+      unlockAtMeters: 0
+      lockAtMeters: 0
+  shuffledBiomes:
+  - biomeName: Biome1A
+    entries:
+    - name: BiomeA
+      pool: {fileID: 1377922346}
+      weight: 1
+      groundY: -4.06
+      isFlying: 0
+      flyYMin: 0
+      flyYMax: 0
+      warningDuration: 0
+      unlockAtMeters: 0
+      lockAtMeters: 200
+  - biomeName: BiomeB
+    entries:
+    - name: BiomeB
+      pool: {fileID: 1114744037}
+      weight: 1
+      groundY: -4.06
+      isFlying: 0
+      flyYMin: 0
+      flyYMax: 0
+      warningDuration: 0
+      unlockAtMeters: 0
+      lockAtMeters: 200
+  - biomeName: BiomeC
+    entries:
+    - name: BiomeC
+      pool: {fileID: 1055501194}
+      weight: 1
+      groundY: -4.06
+      isFlying: 0
+      flyYMin: 0
+      flyYMax: 0
+      warningDuration: 0
+      unlockAtMeters: 0
+      lockAtMeters: 200
+  biomeLength: 200
+  staticSpawner: {fileID: 1496770613}
+--- !u!4 &939369918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939369916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1055501192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055501193}
+  - component: {fileID: 1055501194}
+  m_Layer: 0
+  m_Name: BiomeC_ObstaclesPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055501193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055501192}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 207550538}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055501194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055501192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  prefabs:
+  - {fileID: 1156744589142157723, guid: 55b1a16c607dc65468a7e40a0e829983, type: 3}
+  - {fileID: 156056098380069176, guid: 687c78c0b035d184b81ca4a25833d17d, type: 3}
+  - {fileID: 8009016863330400766, guid: 32f49f3ead87e7a40a9351094a813e60, type: 3}
+  - {fileID: 5605445800503343263, guid: 766f42d8b141e8048844569fa763a902, type: 3}
+  - {fileID: 5192102336165973941, guid: c1274f96413dcd44fb0b13d6b7666267, type: 3}
+  initialSizePerPrefab: 5
+--- !u!1 &1114744035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1114744036}
+  - component: {fileID: 1114744037}
+  m_Layer: 0
+  m_Name: BiomeB_ObstaclesPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1114744036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114744035}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 207550538}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1114744037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114744035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  prefabs:
+  - {fileID: 1705283683135338444, guid: a64a981be4393004eb9f8c3083bd7a78, type: 3}
+  - {fileID: 6455673251006391997, guid: 2acb09ec08cb3fc438ae6433f5d59eae, type: 3}
+  - {fileID: 4972946527066392828, guid: ed953599bbe6f4a48ad081fc86c99351, type: 3}
+  - {fileID: 4331655579588350633, guid: 826d97a44dc2b8c4bba1acb54e465d33, type: 3}
+  - {fileID: 5044283222830247168, guid: faae9000b85964e4f81ae3631cf6000f, type: 3}
+  initialSizePerPrefab: 5
 --- !u!1 &1310552218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1767,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310552218}
   m_CullTransparentMesh: 1
+--- !u!1 &1377922344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1377922345}
+  - component: {fileID: 1377922346}
+  m_Layer: 0
+  m_Name: BiomeA_ObstaclesPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1377922345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377922344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 207550538}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1377922346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377922344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  prefabs:
+  - {fileID: 4516632397918524050, guid: a6ce3355b3ab35c4984f193a5af12cd5, type: 3}
+  - {fileID: 2106446158554753437, guid: 6ff58a365f0bc72409dab9d1af5f57d7, type: 3}
+  - {fileID: 9085142760270239699, guid: 880579b121e778f4c8c3b7eae98f0085, type: 3}
+  - {fileID: 1449136900005722617, guid: 77bf65919507d934db021e7fed72f12a, type: 3}
+  - {fileID: 2886637266342181541, guid: 468e02fcbe9e2e543acb8a76c22d67bc, type: 3}
+  initialSizePerPrefab: 5
 --- !u!1 &1399071496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,17 +2254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d091ef4514bba499df084e2c5d5705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HazardSpawner
-  entries:
-  - name: Static
-    pool: {fileID: 838276152}
-    weight: 1
-    groundY: -4.055
-    isFlying: 0
-    flyYMin: -1
-    flyYMax: 3.5
-    warningDuration: 0.8
-    unlockAtMeters: 0
-    lockAtMeters: 0
+  entries: []
   spawnX: 11
   minInterval: 1.5
   maxInterval: 3
@@ -3025,6 +3267,7 @@ SceneRoots:
   - {fileID: 737462187}
   - {fileID: 1772142761}
   - {fileID: 714934753}
+  - {fileID: 939369918}
   - {fileID: 2032024676}
   - {fileID: 1819978539}
   - {fileID: 750044133}

@@ -83,6 +83,14 @@ public class HazardSpawner : MonoBehaviour
         }
     }
 
+    /// <summary>
+/// Called by BiomeManager on biome transitions to swap the active hazard pool/entries.
+/// </summary>
+public void SetEntries(SpawnEntry[] newEntries)
+{
+    entries = newEntries;
+}
+
     IEnumerator SpawnFlyingWithWarning(SpawnEntry entry)
     {
         float y = Random.Range(entry.flyYMin, entry.flyYMax);
