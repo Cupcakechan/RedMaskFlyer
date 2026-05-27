@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxRiseSpeed = 5f;    // top upward speed while holding
     [SerializeField] private float maxFallSpeed = 7f;    // top downward speed when released
     [SerializeField] private float riseAccel = 30f;      // how fast we accelerate upward
-    [SerializeField] private float fallAccel = 20f;      // how fast we accelerate downward
+    [SerializeField] private float fallAccel = 20f; 
+   
+    [Header("Ceiling")]
+    [SerializeField] private float maxY = 3.7f;   // highest the player's feet can reach     // how fast we accelerate downward
 
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheck;
@@ -59,22 +62,29 @@ public class PlayerController : MonoBehaviour
 
         if (flyHeld)
         {
-            targetVy = maxRiseSpeed;     // thrust up
+            targetVy = maxRiseSpeed;
             accel = riseAccel;
         }
         else if (isGrounded)
         {
-            targetVy = 0f;               // rest on the ground
+            targetVy = 0f;
             accel = fallAccel;
         }
         else
         {
-            targetVy = -maxFallSpeed;    // smooth fall
+            targetVy = -maxFallSpeed;
             accel = fallAccel;
         }
 
         float vy = Mathf.MoveTowards(rb.linearVelocity.y, targetVy, accel * Time.fixedDeltaTime);
         rb.linearVelocity = new Vector2(0f, vy);
+
+        // Ceiling clamp — don't let the player fly off the top of the screen.
+        if (rb.position.y > maxY)
+        {
+            rb.position = new Vector2(rb.position.x, maxY);
+            rb.linearVelocity = new Vector2(0f, 0f);
+        }
     }
 
     void UpdateAnimation()
