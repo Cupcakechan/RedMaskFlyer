@@ -256,6 +256,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56412233}
   m_CullTransparentMesh: 1
+--- !u!1 &207550536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 207550538}
+  m_Layer: 0
+  m_Name: ObstaclePool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &207550538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207550536}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 838276151}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &219787018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219787019}
+  - component: {fileID: 219787020}
+  m_Layer: 0
+  m_Name: 200m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219787019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219787018}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1751517018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &219787020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219787018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  prefabs:
+  - {fileID: 3289745941678371532, guid: 5c4070656000532469be3ac31722211f, type: 3}
+  initialSizePerPrefab: 5
 --- !u!1 &410979210
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,55 +684,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 21182d65bee64c148aa76e6e94d542ef, type: 3}
   - {fileID: 21300000, guid: e62bcdc2ce7e1b741844bb7496f07d79, type: 3}
   - {fileID: 21300000, guid: 86aa7477e694c774fa3aeecf13f1406b, type: 3}
---- !u!1 &712983914
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 712983916}
-  - component: {fileID: 712983915}
-  m_Layer: 0
-  m_Name: Tier 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &712983915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712983914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
-  prefabs:
-  - {fileID: 3060313105366072805, guid: cf9710493f6c0dd4ab849d1cbf727cfa, type: 3}
-  - {fileID: 4798687762557944691, guid: 64a7fcfcadb10e24eaf8ace896ab8e3d, type: 3}
-  - {fileID: 2965655131889981466, guid: fde06d01226a62a468a54c69bc3166be, type: 3}
-  initialSizePerPrefab: 5
---- !u!4 &712983916
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712983914}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &714934751
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +947,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &784039663
+--- !u!1 &815102865
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -925,39 +955,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 784039665}
-  - component: {fileID: 784039664}
+  - component: {fileID: 815102867}
+  - component: {fileID: 815102866}
   m_Layer: 0
-  m_Name: Tier 1
+  m_Name: FlyingSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &784039664
+--- !u!114 &815102866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784039663}
+  m_GameObject: {fileID: 815102865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
+  m_Script: {fileID: 11500000, guid: 25d091ef4514bba499df084e2c5d5705, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
-  prefabs:
-  - {fileID: 4528512974072801093, guid: 4ce5ec8cdde0f094ca35faac832e5b0d, type: 3}
-  - {fileID: 8247710699694587784, guid: 755dccc241d805848a5c23f89d8b25ce, type: 3}
-  - {fileID: 8997256286814695537, guid: 5255cc5a6a39e00489fddbc8ee004b3b, type: 3}
-  initialSizePerPrefab: 5
---- !u!4 &784039665
+  m_EditorClassIdentifier: Assembly-CSharp::HazardSpawner
+  entries:
+  - name: 200m
+    pool: {fileID: 219787020}
+    weight: 1
+    groundY: 0
+    isFlying: 1
+    flyYMin: -2
+    flyYMax: 3
+    warningDuration: 0.8
+    unlockAtMeters: 200
+    lockAtMeters: 0
+  spawnX: 11
+  minInterval: 3
+  maxInterval: 9
+  warningInstance: {fileID: 1402031307}
+  warningX: 7.5
+--- !u!4 &815102867
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784039663}
+  m_GameObject: {fileID: 815102865}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -966,7 +1007,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &911707037
+--- !u!1 &838276150
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -974,22 +1015,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 911707039}
-  - component: {fileID: 911707038}
+  - component: {fileID: 838276151}
+  - component: {fileID: 838276152}
   m_Layer: 0
-  m_Name: 'ObstaclePool '
+  m_Name: Cave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &911707038
+--- !u!4 &838276151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838276150}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 207550538}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838276152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911707037}
+  m_GameObject: {fileID: 838276150}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
@@ -1002,22 +1058,7 @@ MonoBehaviour:
   - {fileID: 2904649537134733712, guid: 2125b70d5347f7a47b3be30ea6c72d50, type: 3}
   - {fileID: 6955545120314856615, guid: 088c721758c2ec74e8a933640ddc6390, type: 3}
   initialSizePerPrefab: 5
---- !u!4 &911707039
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911707037}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1267887429
+--- !u!1 &902953996
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1025,37 +1066,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1267887431}
-  - component: {fileID: 1267887430}
+  - component: {fileID: 902953998}
+  - component: {fileID: 902953997}
   m_Layer: 0
-  m_Name: FlyersPool
+  m_Name: WalkerSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1267887430
+--- !u!114 &902953997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267887429}
+  m_GameObject: {fileID: 902953996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
+  m_Script: {fileID: 11500000, guid: 25d091ef4514bba499df084e2c5d5705, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
-  prefabs:
-  - {fileID: 3289745941678371532, guid: 5c4070656000532469be3ac31722211f, type: 3}
-  initialSizePerPrefab: 5
---- !u!4 &1267887431
+  m_EditorClassIdentifier: Assembly-CSharp::HazardSpawner
+  entries:
+  - name: Start
+    pool: {fileID: 1769183888}
+    weight: 1
+    groundY: -4.06
+    isFlying: 0
+    flyYMin: 0
+    flyYMax: 0
+    warningDuration: 0
+    unlockAtMeters: 100
+    lockAtMeters: 0
+  spawnX: 11
+  minInterval: 3
+  maxInterval: 5
+  warningInstance: {fileID: 0}
+  warningX: 7.5
+--- !u!4 &902953998
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267887429}
+  m_GameObject: {fileID: 902953996}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1211,6 +1265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1402031309}
   - component: {fileID: 1402031308}
+  - component: {fileID: 1402031310}
   m_Layer: 0
   m_Name: Warning
   m_TagString: Untagged
@@ -1292,6 +1347,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1402031310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402031307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e8c6d80af7cfb4ea2bbcbb4ddbf9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WarningBlink
+  blinkInterval: 0.12
+--- !u!1 &1468515639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468515640}
+  m_Layer: 0
+  m_Name: WalkerPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468515640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468515639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1769183887}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1496770612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1403,7 @@ GameObject:
   - component: {fileID: 1496770614}
   - component: {fileID: 1496770613}
   m_Layer: 0
-  m_Name: 'HazardSpawner '
+  m_Name: StaticSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1323,7 +1423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HazardSpawner
   entries:
   - name: Static
-    pool: {fileID: 911707038}
+    pool: {fileID: 838276152}
     weight: 1
     groundY: -4.055
     isFlying: 0
@@ -1331,46 +1431,11 @@ MonoBehaviour:
     flyYMax: 3.5
     warningDuration: 0.8
     unlockAtMeters: 0
-  - name: Flyers
-    pool: {fileID: 1267887430}
-    weight: 1
-    groundY: -4.06
-    isFlying: 1
-    flyYMin: -1
-    flyYMax: 3.5
-    warningDuration: 0.8
-    unlockAtMeters: 0
-  - name: Tier 1
-    pool: {fileID: 784039664}
-    weight: 1
-    groundY: -4.06
-    isFlying: 0
-    flyYMin: -1
-    flyYMax: 3.5
-    warningDuration: 0.8
-    unlockAtMeters: 0
-  - name: Tier 2
-    pool: {fileID: 1737142408}
-    weight: 3
-    groundY: -4.06
-    isFlying: 0
-    flyYMin: -1
-    flyYMax: 3.5
-    warningDuration: 0.8
-    unlockAtMeters: 200
-  - name: Tier 3
-    pool: {fileID: 712983915}
-    weight: 4
-    groundY: -4.06
-    isFlying: 0
-    flyYMin: -1
-    flyYMax: 3.5
-    warningDuration: 0.8
-    unlockAtMeters: 400
+    lockAtMeters: 0
   spawnX: 11
-  minInterval: 1
-  maxInterval: 2
-  warningInstance: {fileID: 1402031307}
+  minInterval: 1.5
+  maxInterval: 3
+  warningInstance: {fileID: 0}
   warningX: 7.5
 --- !u!4 &1496770614
 Transform:
@@ -1387,7 +1452,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1737142407
+--- !u!1 &1751517017
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1395,45 +1460,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1737142409}
-  - component: {fileID: 1737142408}
+  - component: {fileID: 1751517018}
   m_Layer: 0
-  m_Name: Tier 2
+  m_Name: FlyingPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1737142408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737142407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
-  prefabs:
-  - {fileID: 8997256286814695537, guid: 5255cc5a6a39e00489fddbc8ee004b3b, type: 3}
-  - {fileID: 3969533803533470892, guid: 51cbdf57cf0ca174081722e6cc5c9fc1, type: 3}
-  - {fileID: 464712771325108406, guid: 6251a204e11e6be44bc8e8e4d5ce5930, type: 3}
-  initialSizePerPrefab: 5
---- !u!4 &1737142409
+--- !u!4 &1751517018
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737142407}
+  m_GameObject: {fileID: 1751517017}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 219787019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759772758
@@ -1467,6 +1515,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 636884093}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1769183886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1769183887}
+  - component: {fileID: 1769183888}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1769183887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769183886}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1468515640}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769183888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769183886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  prefabs:
+  - {fileID: 8997256286814695537, guid: 5255cc5a6a39e00489fddbc8ee004b3b, type: 3}
+  - {fileID: 3969533803533470892, guid: 51cbdf57cf0ca174081722e6cc5c9fc1, type: 3}
+  initialSizePerPrefab: 5
 --- !u!1 &1772142760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,10 +1785,10 @@ SceneRoots:
   - {fileID: 714934753}
   - {fileID: 1819978539}
   - {fileID: 750044133}
-  - {fileID: 911707039}
   - {fileID: 1496770614}
-  - {fileID: 1267887431}
-  - {fileID: 784039665}
-  - {fileID: 1737142409}
-  - {fileID: 712983916}
+  - {fileID: 902953998}
+  - {fileID: 815102867}
   - {fileID: 1402031309}
+  - {fileID: 207550538}
+  - {fileID: 1468515640}
+  - {fileID: 1751517018}

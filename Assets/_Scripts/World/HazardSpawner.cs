@@ -14,16 +14,18 @@ public class HazardSpawner : MonoBehaviour
         [Tooltip("Y position when this is a GROUND entry (isFlying = false).")]
         public float groundY = -4f;
 
-        [Tooltip("If true, this is a flying entry: uses flyYMin/flyYMax for spawn Y and shows the '!' warning first.")]
+        [Tooltip("If true: uses flyYMin/flyYMax for spawn Y and shows the '!' warning first.")]
         public bool isFlying = false;
         public float flyYMin = -1f;
         public float flyYMax = 3.5f;
         [Tooltip("Seconds the '!' shows before the flyer enters.")]
         [Min(0f)] public float warningDuration = 0.8f;
 
-        [Header("Unlock")]
-        [Tooltip("Distance (meters) at which this entry joins the spawn mix. 0 = available from the start.")]
+        [Header("Active Window (meters)")]
+        [Tooltip("Distance at which this entry JOINS the mix. 0 = available from the start.")]
         [Min(0f)] public float unlockAtMeters = 0f;
+        [Tooltip("Distance at which this entry LEAVES the mix. 0 = never locks.")]
+        [Min(0f)] public float lockAtMeters = 0f;
     }
 
     [Header("Spawn Entries")]
@@ -34,10 +36,8 @@ public class HazardSpawner : MonoBehaviour
     [SerializeField] private float minInterval = 1.5f;
     [SerializeField] private float maxInterval = 3f;
 
-    [Header("Flying Warning")]
-    [Tooltip("Single in-scene Warning GameObject (deactivated by default).")]
+    [Header("Flying Warning (only used if entries have isFlying = true)")]
     [SerializeField] private GameObject warningInstance;
-    [Tooltip("X where the '!' appears (just inside the right edge).")]
     [SerializeField] private float warningX = 7.5f;
 
     private float timer;
@@ -97,7 +97,6 @@ public class HazardSpawner : MonoBehaviour
 
         if (warningInstance != null) warningInstance.SetActive(false);
 
-        // Abort if the world stopped during the warning (player died).
         if (WorldManager.Instance != null && WorldManager.Instance.Speed <= 0f) yield break;
 
         GameObject obj = entry.pool.Get();
@@ -111,8 +110,9 @@ public class HazardSpawner : MonoBehaviour
         float total = 0f;
         foreach (SpawnEntry e in entries)
         {
-            if (meters >= e.unlockAtMeters)
-                total += e.weight;
+            if (meters < e.unlockAtMeters) continue;
+            if (e.lockAtMeters > 0f && meters >= e.lockAtMeters) continue;
+            total += e.weight;
         }
         if (total <= 0f) return null;
 
@@ -121,6 +121,7 @@ public class HazardSpawner : MonoBehaviour
         foreach (SpawnEntry e in entries)
         {
             if (meters < e.unlockAtMeters) continue;
+            if (e.lockAtMeters > 0f && meters >= e.lockAtMeters) continue;
             cumulative += e.weight;
             if (r <= cumulative) return e;
         }
