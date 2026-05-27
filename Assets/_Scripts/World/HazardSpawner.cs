@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class HazardSpawner : MonoBehaviour
@@ -8,9 +9,20 @@ public class HazardSpawner : MonoBehaviour
         public string name;
         public ObjectPool pool;
         [Min(0f)] public float weight = 1f;
+
+        [Header("Spawn Y")]
+        [Tooltip("Y position when this is a GROUND entry (isFlying = false).")]
         public float groundY = -4f;
 
-        [Tooltip("Distance (in meters) at which this entry joins the spawn mix. 0 = available from the start.")]
+        [Tooltip("If true, this is a flying entry: uses flyYMin/flyYMax for spawn Y and shows the '!' warning first.")]
+        public bool isFlying = false;
+        public float flyYMin = -1f;
+        public float flyYMax = 3.5f;
+        [Tooltip("Seconds the '!' shows before the flyer enters.")]
+        [Min(0f)] public float warningDuration = 0.8f;
+
+        [Header("Unlock")]
+        [Tooltip("Distance (meters) at which this entry joins the spawn mix. 0 = available from the start.")]
         [Min(0f)] public float unlockAtMeters = 0f;
     }
 
@@ -22,11 +34,18 @@ public class HazardSpawner : MonoBehaviour
     [SerializeField] private float minInterval = 1.5f;
     [SerializeField] private float maxInterval = 3f;
 
+    [Header("Flying Warning")]
+    [Tooltip("Single in-scene Warning GameObject (deactivated by default).")]
+    [SerializeField] private GameObject warningInstance;
+    [Tooltip("X where the '!' appears (just inside the right edge).")]
+    [SerializeField] private float warningX = 7.5f;
+
     private float timer;
     private float nextSpawn;
 
     void Start()
     {
+        if (warningInstance != null) warningInstance.SetActive(false);
         ScheduleNext();
     }
 
@@ -53,15 +72,42 @@ public class HazardSpawner : MonoBehaviour
         SpawnEntry entry = PickWeighted();
         if (entry == null || entry.pool == null) return;
 
+        if (entry.isFlying)
+        {
+            StartCoroutine(SpawnFlyingWithWarning(entry));
+        }
+        else
+        {
+            GameObject obj = entry.pool.Get();
+            obj.transform.position = new Vector3(spawnX, entry.groundY, 0f);
+        }
+    }
+
+    IEnumerator SpawnFlyingWithWarning(SpawnEntry entry)
+    {
+        float y = Random.Range(entry.flyYMin, entry.flyYMax);
+
+        if (warningInstance != null)
+        {
+            warningInstance.transform.position = new Vector3(warningX, y, 0f);
+            warningInstance.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(entry.warningDuration);
+
+        if (warningInstance != null) warningInstance.SetActive(false);
+
+        // Abort if the world stopped during the warning (player died).
+        if (WorldManager.Instance != null && WorldManager.Instance.Speed <= 0f) yield break;
+
         GameObject obj = entry.pool.Get();
-        obj.transform.position = new Vector3(spawnX, entry.groundY, 0f);
+        obj.transform.position = new Vector3(spawnX, y, 0f);
     }
 
     SpawnEntry PickWeighted()
     {
         int meters = (ScoreManager.Instance != null) ? ScoreManager.Instance.GetMeters() : 0;
 
-        // Sum the weights of currently-unlocked entries only.
         float total = 0f;
         foreach (SpawnEntry e in entries)
         {
@@ -74,7 +120,7 @@ public class HazardSpawner : MonoBehaviour
         float cumulative = 0f;
         foreach (SpawnEntry e in entries)
         {
-            if (meters < e.unlockAtMeters) continue;   // skip locked entries
+            if (meters < e.unlockAtMeters) continue;
             cumulative += e.weight;
             if (r <= cumulative) return e;
         }
