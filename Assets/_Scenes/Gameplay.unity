@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &239709077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239709079}
+  - component: {fileID: 239709078}
+  m_Layer: 0
+  m_Name: 'EnemyPool '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &239709078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239709077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa0df169a10b8d4ca1648b76ba51986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  prefab: {fileID: 8997256286814695537, guid: 5255cc5a6a39e00489fddbc8ee004b3b, type: 3}
+  initialSize: 10
+--- !u!4 &239709079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239709077}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410979210
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,15 +501,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676bb719cd43a064b949179b0116fe5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxLives: 4
+  maxLives: 5
   invincibilityDuration: 1.5
   blinkInterval: 0.1
+  deathFallGravity: 3
+  restartDelay: 2
   heartImage: {fileID: 627008881}
   heartSprites:
+  - {fileID: 21300000, guid: 861e29cf7d7a4fe4cb1ed94d4b8d7719, type: 3}
   - {fileID: 21300000, guid: 9dbc53f203d69e64aa0199f77e197c2e, type: 3}
   - {fileID: 21300000, guid: 21182d65bee64c148aa76e6e94d542ef, type: 3}
   - {fileID: 21300000, guid: e62bcdc2ce7e1b741844bb7496f07d79, type: 3}
   - {fileID: 21300000, guid: 86aa7477e694c774fa3aeecf13f1406b, type: 3}
+--- !u!1 &649483642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 649483644}
+  - component: {fileID: 649483643}
+  m_Layer: 0
+  m_Name: 'EnemySpawner '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &649483643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649483642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af29408a2684c342abcd80668275c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
+  pool: {fileID: 239709078}
+  spawnX: 11
+  groundY: -4.06
+  minInterval: 2.5
+  maxInterval: 4.5
+--- !u!4 &649483644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649483642}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &737462185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,3 +1264,5 @@ SceneRoots:
   - {fileID: 1666566830}
   - {fileID: 1819978539}
   - {fileID: 750044133}
+  - {fileID: 239709079}
+  - {fileID: 649483644}
