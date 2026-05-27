@@ -1,8 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Lives")]
@@ -12,6 +15,10 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float invincibilityDuration = 1.5f;
     [SerializeField] private float blinkInterval = 0.1f;
 
+    [Header("Death")]
+    [SerializeField] private float deathFallGravity = 3f;
+    [SerializeField] private float restartDelay = 2f;
+
     [Header("HUD")]
     [SerializeField] private Image heartImage;
     [Tooltip("Order: Element 0 = 1-chunk (almost empty) ... last Element = full heart.")]
@@ -19,13 +26,19 @@ public class PlayerHealth : MonoBehaviour
 
     private int currentLives;
     private bool isInvincible;
+    private bool isDead;
     private float invincibilityTimer;
     private float blinkTimer;
+
     private SpriteRenderer sr;
+    private Animator animator;
+    private Rigidbody2D rb;
 
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Start()
@@ -50,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
         if (invincibilityTimer <= 0f)
         {
             isInvincible = false;
-            sr.enabled = true;              // always visible when it ends
+            sr.enabled = true;
         }
     }
 
@@ -62,18 +75,19 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage()
     {
-        if (isInvincible) return;
+        if (isInvincible || isDead) return;
 
         currentLives--;
         Debug.Log("Hit! Lives remaining: " + currentLives);
 
         if (currentLives <= 0)
         {
-            Die();                          // empty heart frame never shows
+            Die();
             return;
         }
 
         UpdateHeart();
+        animator.SetTrigger("Hurt");
 
         isInvincible = true;
         invincibilityTimer = invincibilityDuration;
@@ -89,7 +103,26 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Player died — restarting run.");
-        SceneManager.LoadScene("Gameplay");   // swapped to GameOver scene later
+        isDead = true;
+        sr.enabled = true;                          // ensure visible (not mid-blink)
+        animator.SetTrigger("Dead");
+
+        // Freeze the world so the hero falls straight down.
+        if (WorldManager.Instance != null) WorldManager.Instance.Speed = 0f;
+
+        // Hand control to physics and let gravity drop him to the ground.
+        PlayerController pc = GetComponent<PlayerController>();
+        if (pc != null) pc.enabled = false;
+
+        rb.linearVelocity = Vector2.zero;
+        rb.gravityScale = deathFallGravity;
+
+        StartCoroutine(RestartAfterDelay());
+    }
+
+    IEnumerator RestartAfterDelay()
+    {
+        yield return new WaitForSeconds(restartDelay);
+        SceneManager.LoadScene("Gameplay");          // swapped to GameOver scene later
     }
 }
