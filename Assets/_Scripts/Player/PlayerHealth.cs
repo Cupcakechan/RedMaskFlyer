@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Lives")]
-    [SerializeField] private int maxLives = 4;
+    [SerializeField] private int maxLives = 5;
 
     [Header("Invincibility")]
     [SerializeField] private float invincibilityDuration = 1.5f;
@@ -17,11 +17,11 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Death")]
     [SerializeField] private float deathFallGravity = 3f;
-    [SerializeField] private float restartDelay = 2f;
+    [SerializeField] private float deathDelay = 2f;
 
     [Header("HUD")]
     [SerializeField] private Image heartImage;
-    [Tooltip("Order: Element 0 = 1-chunk (almost empty) ... last Element = full heart.")]
+    [Tooltip("Order: Element 0 = least full ... last Element = full heart.")]
     [SerializeField] private Sprite[] heartSprites;
 
     private int currentLives;
@@ -56,7 +56,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (blinkTimer <= 0f)
         {
-            sr.enabled = !sr.enabled;       // blink while invincible
+            sr.enabled = !sr.enabled;
             blinkTimer = blinkInterval;
         }
 
@@ -78,8 +78,6 @@ public class PlayerHealth : MonoBehaviour
         if (isInvincible || isDead) return;
 
         currentLives--;
-        Debug.Log("Hit! Lives remaining: " + currentLives);
-
         if (currentLives <= 0)
         {
             Die();
@@ -104,25 +102,34 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         isDead = true;
-        sr.enabled = true;                          // ensure visible (not mid-blink)
+        sr.enabled = true;
         animator.SetTrigger("Dead");
 
-        // Freeze the world so the hero falls straight down.
         if (WorldManager.Instance != null) WorldManager.Instance.Speed = 0f;
 
-        // Hand control to physics and let gravity drop him to the ground.
         PlayerController pc = GetComponent<PlayerController>();
         if (pc != null) pc.enabled = false;
 
         rb.linearVelocity = Vector2.zero;
         rb.gravityScale = deathFallGravity;
 
-        StartCoroutine(RestartAfterDelay());
+        // Record the run + update the best.
+        int meters = (ScoreManager.Instance != null) ? ScoreManager.Instance.GetMeters() : 0;
+        RunData.LastScore = meters;
+        int best = PlayerPrefs.GetInt("BestScore", 0);
+        RunData.IsNewBest = meters > best;
+        if (RunData.IsNewBest)
+        {
+            PlayerPrefs.SetInt("BestScore", meters);
+            PlayerPrefs.Save();
+        }
+
+        StartCoroutine(GoToGameOver());
     }
 
-    IEnumerator RestartAfterDelay()
+    IEnumerator GoToGameOver()
     {
-        yield return new WaitForSeconds(restartDelay);
-        SceneManager.LoadScene("Gameplay");          // swapped to GameOver scene later
+        yield return new WaitForSeconds(deathDelay);
+        SceneManager.LoadScene("GameOver");
     }
 }
