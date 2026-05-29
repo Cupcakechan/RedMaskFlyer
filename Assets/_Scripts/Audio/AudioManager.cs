@@ -13,6 +13,11 @@ public class AudioManager : MonoBehaviour
     [Range(0f, 1f)]
     [SerializeField] private float musicVolume = 0.5f;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip buttonClickClip;
+    [Range(0f, 1f)] [SerializeField] private float sfxVolume = 1f;
+    private AudioSource sfxSource;
+
     private AudioSource source;
     private readonly List<int> order = new List<int>();
     private int orderIndex;
@@ -26,6 +31,9 @@ public class AudioManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        // Dedicated source for one-shot SFX (separate from music so it never interrupts the track)
+    sfxSource = gameObject.AddComponent<AudioSource>();
+    sfxSource.playOnAwake = false;
 
         source = GetComponent<AudioSource>();
         source.loop = false;          // we advance the playlist manually
@@ -57,6 +65,16 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlaySFX(AudioClip clip, float volumeScale = 1f)
+{
+    if (clip == null || sfxSource == null) return;
+    sfxSource.PlayOneShot(clip, sfxVolume * volumeScale);
+}
+
+public void PlayButtonClick()
+{
+    PlaySFX(buttonClickClip);
+}
     void Advance()
     {
         orderIndex++;
