@@ -2756,6 +2756,7 @@ MonoBehaviour:
   starterBiome:
     biomeName: Starter
     useSpaceClouds: 1
+    spawnClouds: 1
     entries:
     - name: Starter
       pool: {fileID: 838276152}
@@ -2774,6 +2775,7 @@ MonoBehaviour:
   shuffledBiomes:
   - biomeName: BiomeA
     useSpaceClouds: 0
+    spawnClouds: 1
     entries:
     - name: BiomeA
       pool: {fileID: 1377922346}
@@ -2791,6 +2793,7 @@ MonoBehaviour:
     parallaxNearSprite: {fileID: 21300000, guid: 4834bbbee0d25f24a9083e47c067efd9, type: 3}
   - biomeName: BiomeB
     useSpaceClouds: 0
+    spawnClouds: 0
     entries:
     - name: BiomeB
       pool: {fileID: 1114744037}
@@ -2808,6 +2811,7 @@ MonoBehaviour:
     parallaxNearSprite: {fileID: 21300000, guid: f89e102ecc689144390d7abf12e64332, type: 3}
   - biomeName: BiomeC
     useSpaceClouds: 1
+    spawnClouds: 1
     entries:
     - name: BiomeC
       pool: {fileID: 1055501194}
@@ -2825,6 +2829,7 @@ MonoBehaviour:
     parallaxNearSprite: {fileID: 21300000, guid: 0db14eb35512e924b974d3493a28c4a7, type: 3}
   - biomeName: BiomeD
     useSpaceClouds: 0
+    spawnClouds: 1
     entries:
     - name: BiomeD
       pool: {fileID: 1590563500}
@@ -2842,6 +2847,7 @@ MonoBehaviour:
     parallaxNearSprite: {fileID: 21300000, guid: 4834bbbee0d25f24a9083e47c067efd9, type: 3}
   - biomeName: BiomeE
     useSpaceClouds: 0
+    spawnClouds: 0
     entries:
     - name: BiomeE
       pool: {fileID: 2132160945}
@@ -2859,6 +2865,7 @@ MonoBehaviour:
     parallaxNearSprite: {fileID: 21300000, guid: f89e102ecc689144390d7abf12e64332, type: 3}
   - biomeName: BiomeF
     useSpaceClouds: 1
+    spawnClouds: 1
     entries:
     - name: BiomeF
       pool: {fileID: 630219791}
@@ -2876,6 +2883,7 @@ MonoBehaviour:
     parallaxNearSprite: {fileID: 21300000, guid: 0db14eb35512e924b974d3493a28c4a7, type: 3}
   - biomeName: BiomeG
     useSpaceClouds: 0
+    spawnClouds: 1
     entries:
     - name: BiomeG
       pool: {fileID: 1409026180}

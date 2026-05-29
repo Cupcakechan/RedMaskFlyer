@@ -42,6 +42,9 @@ public class CloudSpawner : MonoBehaviour
         // Only drip clouds while the world is actually moving (not dead, not paused).
         if (WorldManager.Instance == null || WorldManager.Instance.Speed <= 0f) return;
 
+        // Skip spawning if this biome has clouds disabled. Existing clouds still drift out on their own.
+        if (BiomeManager.Instance != null && !BiomeManager.Instance.CurrentSpawnsClouds) return;
+
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {

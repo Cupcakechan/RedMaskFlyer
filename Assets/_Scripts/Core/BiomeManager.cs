@@ -23,6 +23,7 @@ public class BiomeManager : MonoBehaviour
     public Sprite CurrentFarSprite { get; private set; }
     public Sprite CurrentNearSprite { get; private set; }
     public bool CurrentCloudsAreSpace { get; private set; }
+    public bool CurrentSpawnsClouds { get; private set; }
 
     private List<BiomeData> sequence;
     private int currentBiomeIndex;
@@ -117,6 +118,7 @@ public class BiomeManager : MonoBehaviour
         CurrentFarSprite = biome.parallaxFarSprite;
         CurrentNearSprite = biome.parallaxNearSprite;
         CurrentCloudsAreSpace = biome.useSpaceClouds;
+        CurrentSpawnsClouds = biome.spawnClouds;
 
         if (targetCamera != null)
         {

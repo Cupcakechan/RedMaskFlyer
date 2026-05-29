@@ -7,7 +7,9 @@ public class BiomeData
 
     [Tooltip("Tick this for space/cosmic biomes so loose clouds use the purple PS_Space_Clouds set instead of white.")]
     public bool useSpaceClouds = false;
-    
+    [Tooltip("Untick to disable loose cloud spawning entirely for this biome (e.g. forest).")]
+public bool spawnClouds = true;
+
     [Header("Hazards")]
     public HazardSpawner.SpawnEntry[] entries;
 
