@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 834276381126224116}
   - component: {fileID: 5175630422118173696}
   - component: {fileID: 7748300712303192766}
+  - component: {fileID: -2439159324910272283}
   m_Layer: 0
   m_Name: Enemy_10
   m_TagString: Obstacle
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5913761896655798232, guid: 102332873b55df44cad83312365ebc2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -164,7 +165,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.7507354}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -174,5 +175,23 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.625, y: 2.75}
+  m_Size: {x: 1.625, y: 1.2485292}
   m_EdgeRadius: 0
+--- !u!114 &-2439159324910272283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7769239339260699873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11f3c217cf19b843a68c075a449e268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoblinArcher
+  pauseDuration: 0.9
+  arrowCount: 3
+  arrowSpacing: 0.25
+  despawnDelay: 0.6
+  arrowPool: {fileID: 0}
+  arrowSpawnOffset: {x: 0.4, y: 0}

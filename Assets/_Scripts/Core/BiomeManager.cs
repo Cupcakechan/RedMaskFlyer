@@ -5,6 +5,8 @@ public class BiomeManager : MonoBehaviour
 {
     public static BiomeManager Instance { get; private set; }
 
+    public Sprite CurrentGroundSprite { get; private set; }
+
     [Header("Biomes")]
     [Tooltip("Always plays first. Same every run.")]
     [SerializeField] private BiomeData starterBiome;
@@ -89,9 +91,10 @@ public class BiomeManager : MonoBehaviour
     }
 
     void ApplyBiome(BiomeData biome)
-    {
-        if (biome == null || staticSpawner == null) return;
-        staticSpawner.SetEntries(biome.entries);
-        Debug.Log($"[BiomeManager] Now entering: {biome.biomeName}");
-    }
+{
+    if (biome == null || staticSpawner == null) return;
+    staticSpawner.SetEntries(biome.entries);
+    CurrentGroundSprite = biome.groundSprite;   // NEW
+    Debug.Log($"[BiomeManager] Now entering: {biome.biomeName}");
+}
 }
