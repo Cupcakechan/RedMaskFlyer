@@ -686,7 +686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 1, y: 9}
+  m_AnchoredPosition: {x: 7.9, y: 9}
   m_SizeDelta: {x: 194.7533, y: 60.4092}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &507176943
@@ -1464,7 +1464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.7, y: -12}
+  m_AnchoredPosition: {x: 8.2, y: -12}
   m_SizeDelta: {x: 360, y: 80.3487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195247638
@@ -1641,7 +1641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -171.9}
+  m_AnchoredPosition: {x: 8, y: -185}
   m_SizeDelta: {x: 360.4771, y: 180.2385}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206493329
@@ -2572,7 +2572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "NEW HIGH SCORE \u2014 RANK #2!"
+  m_text: NEW HIGH SCORE - RANK #2!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7166c8ef2424be24b9d870043ac50228, type: 2}
   m_sharedMaterial: {fileID: 2577468963601401343, guid: 7166c8ef2424be24b9d870043ac50228, type: 2}

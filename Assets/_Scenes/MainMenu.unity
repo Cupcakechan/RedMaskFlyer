@@ -1443,7 +1443,48 @@ MonoBehaviour:
   shuffle: 1
   musicVolume: 0.5
   buttonClickClip: {fileID: 8300000, guid: 3e1c3b130a4858c43bf93eee65d05236, type: 3}
-  sfxVolume: 1
+  flyClip: {fileID: 0}
+  hurtClip: {fileID: 8300000, guid: 7742e1a67cc0ab74db1807705487a97d, type: 3}
+  enemyNoises:
+  - {fileID: 8300000, guid: 7d67afb9fc135104ca87cb7c58c27c7f, type: 3}
+  - {fileID: 8300000, guid: 8309d0e211269cb4d9cae0502aafbc73, type: 3}
+  - {fileID: 8300000, guid: 5fbe43e724e3e1d4d9ebb6c9537e8c5e, type: 3}
+  - {fileID: 8300000, guid: f98ff70caba14d64e935d2cacaab3202, type: 3}
+  - {fileID: 8300000, guid: 2295ba76a94a4674e8b896e40fc3f26d, type: 3}
+  - {fileID: 8300000, guid: a831cfffc8d32824496f741c2bb9adfb, type: 3}
+  - {fileID: 8300000, guid: 56d275d5e3e38534c88eae260a98d91a, type: 3}
+  - {fileID: 8300000, guid: f7573fed3d4e7b048be3c2bcf286ba91, type: 3}
+  - {fileID: 8300000, guid: 440cd76540ce56642a5a7fe686271e21, type: 3}
+  - {fileID: 8300000, guid: 660b873cccab77145ad8f51aa7aa087f, type: 3}
+  - {fileID: 8300000, guid: f9eb624346152d447b02f75f88a5e8c9, type: 3}
+  - {fileID: 8300000, guid: 3709f5006ca4fe3408b67ad1a23255ca, type: 3}
+  - {fileID: 8300000, guid: dd0ea7de0021ddc4b8522a254418bd2b, type: 3}
+  - {fileID: 8300000, guid: 694dc82982942a74090665edf79a0760, type: 3}
+  - {fileID: 8300000, guid: a644f72a1591408488175d9a7ffce984, type: 3}
+  - {fileID: 8300000, guid: 56158f305fb7dc34f92d599c8d3939a4, type: 3}
+  - {fileID: 8300000, guid: 3e7b980e7467f7840983f41bba07767a, type: 3}
+  - {fileID: 8300000, guid: 8dbd9855a783ae34bbaddc114f74193a, type: 3}
+  - {fileID: 8300000, guid: 9c0179cbe2a5e274ab3c689a3e2ea679, type: 3}
+  - {fileID: 8300000, guid: ee89462e1f5bb4247b14839a280ef4da, type: 3}
+  - {fileID: 8300000, guid: 56549d1a9ac8b9147b5df476dc96d50c, type: 3}
+  - {fileID: 8300000, guid: 6a75bf59d91047a418cc5efd0f94c9aa, type: 3}
+  - {fileID: 8300000, guid: 05458ccc1d3d8e745a3e3ce5c34da595, type: 3}
+  - {fileID: 8300000, guid: 7cea4d93aed18214a8a5ecd3659614d7, type: 3}
+  - {fileID: 8300000, guid: 03cfdf4243275714f9abc3c7bd8848a4, type: 3}
+  - {fileID: 8300000, guid: 1ae59c611a21bfe47b8cde120949240b, type: 3}
+  - {fileID: 8300000, guid: a43178f2a6f12e247984635e09c98cb2, type: 3}
+  - {fileID: 8300000, guid: a6b95770a03f134408461c2f99233b4f, type: 3}
+  - {fileID: 8300000, guid: b586a468ebb0e1540a82e8ac9461fb41, type: 3}
+  - {fileID: 8300000, guid: 10569b5b317c22240a17120c2600eb84, type: 3}
+  - {fileID: 8300000, guid: e8a6977cf6542d04ab7ecb4ee97e9d88, type: 3}
+  - {fileID: 8300000, guid: 15aeb9d8a41252d428159b8fd055e1b8, type: 3}
+  - {fileID: 8300000, guid: 784135a74d7659c44a0941eba6bfd130, type: 3}
+  - {fileID: 8300000, guid: 88baf3e4425c6f34ebe467fdba9ba1e8, type: 3}
+  - {fileID: 8300000, guid: 5510c945dc38eed4ea55fbec111e0fc9, type: 3}
+  - {fileID: 8300000, guid: d8fd2d5cfe294fe4b882b7a93081fad3, type: 3}
+  - {fileID: 8300000, guid: ec7d82377fb95124cb6bef06bc87fde3, type: 3}
+  - {fileID: 8300000, guid: 440cd76540ce56642a5a7fe686271e21, type: 3}
+  sfxVolume: 0.345
 --- !u!82 &958316723
 AudioSource:
   m_ObjectHideFlags: 0

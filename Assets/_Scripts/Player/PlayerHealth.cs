@@ -77,6 +77,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isInvincible || isDead) return;
 
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayHurt();
+
         currentLives--;
         if (currentLives <= 0)
         {

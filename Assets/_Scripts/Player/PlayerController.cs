@@ -23,8 +23,9 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     public static PlayerController Instance { get; private set; }
-    private bool isGrounded;
+   private bool isGrounded;
     private bool flyHeld;
+    private bool wasFlyHeld;
 
     void Awake()
     {
@@ -55,8 +56,12 @@ public class PlayerController : MonoBehaviour
             flyHeld = true;
         if (mouse != null && mouse.leftButton.isPressed)
             flyHeld = true;
-    }
 
+        // Play the fly SFX once, on the moment flight begins (false -> true edge).
+        if (flyHeld && !wasFlyHeld && AudioManager.Instance != null)
+            AudioManager.Instance.PlayFly();
+        wasFlyHeld = flyHeld;
+    }
     void HandleFlight()
     {
         float targetVy;

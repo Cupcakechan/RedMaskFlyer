@@ -15,6 +15,10 @@ public class AudioManager : MonoBehaviour
 
     [Header("SFX")]
     [SerializeField] private AudioClip buttonClickClip;
+    [SerializeField] private AudioClip flyClip;
+    [SerializeField] private AudioClip hurtClip;
+    [Tooltip("Walking enemies pick one of these at random when they spawn.")]
+    [SerializeField] private AudioClip[] enemyNoises;
     [Range(0f, 1f)] [SerializeField] private float sfxVolume = 1f;
     private AudioSource sfxSource;
 
@@ -74,6 +78,15 @@ public class AudioManager : MonoBehaviour
 public void PlayButtonClick()
 {
     PlaySFX(buttonClickClip);
+}
+
+public void PlayFly()  => PlaySFX(flyClip);
+public void PlayHurt() => PlaySFX(hurtClip);
+
+public void PlayEnemyNoise()
+{
+    if (enemyNoises == null || enemyNoises.Length == 0) return;
+    PlaySFX(enemyNoises[Random.Range(0, enemyNoises.Length)]);
 }
     void Advance()
     {
