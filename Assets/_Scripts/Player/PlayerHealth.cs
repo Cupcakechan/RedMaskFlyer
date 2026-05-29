@@ -113,16 +113,10 @@ public class PlayerHealth : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.gravityScale = deathFallGravity;
 
-        // Record the run + update the best.
+        // Record the run. The high-score table (on the Game Over screen) now owns "best"
+        // plus the qualify/insert flow, so we no longer write BestScore here.
         int meters = (ScoreManager.Instance != null) ? ScoreManager.Instance.GetMeters() : 0;
         RunData.LastScore = meters;
-        int best = PlayerPrefs.GetInt("BestScore", 0);
-        RunData.IsNewBest = meters > best;
-        if (RunData.IsNewBest)
-        {
-            PlayerPrefs.SetInt("BestScore", meters);
-            PlayerPrefs.Save();
-        }
 
         StartCoroutine(GoToGameOver());
     }
