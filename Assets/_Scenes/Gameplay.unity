@@ -1747,6 +1747,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  maxTiltUp: 10
+  maxTiltDown: 15
+  tiltLerpSpeed: 8
 --- !u!70 &636884096
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

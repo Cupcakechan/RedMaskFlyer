@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.12f;
     [SerializeField] private LayerMask groundLayer;
 
+    [Header("Tilt (visual flight feel)")]
+    [SerializeField] private float maxTiltUp = 18f;     // nose-up degrees while rising
+    [SerializeField] private float maxTiltDown = 24f;   // nose-down degrees while falling
+    [SerializeField] private float tiltLerpSpeed = 8f;  // how quickly the tilt eases toward target
+
     private Rigidbody2D rb;
     private Animator animator;
 
@@ -38,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         ReadInput();
         UpdateAnimation();
+        UpdateTilt();
     }
 
     void FixedUpdate()
@@ -98,5 +104,20 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("IsFlying", flyHeld || !isGrounded);
         animator.SetFloat("Speed", isGrounded ? 1f : 0f);  // grounded = auto-run (Walk), airborne = Fly
+    }
+
+    void UpdateTilt()
+    {
+        float vy = rb.linearVelocity.y;
+        float target;
+
+        // Proportional to how fast we're rising/falling, so a gentle climb tilts gently.
+        if (vy >= 0f)
+            target = (maxRiseSpeed > 0f) ? Mathf.Clamp01(vy / maxRiseSpeed) * maxTiltUp : 0f;
+        else
+            target = (maxFallSpeed > 0f) ? -Mathf.Clamp01(-vy / maxFallSpeed) * maxTiltDown : 0f;
+
+        float angle = Mathf.LerpAngle(transform.eulerAngles.z, target, tiltLerpSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 }
