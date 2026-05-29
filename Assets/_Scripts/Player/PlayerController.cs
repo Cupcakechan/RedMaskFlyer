@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
+    public static PlayerController Instance { get; private set; }
     private bool isGrounded;
     private bool flyHeld;
 
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        Instance = this;
     }
 
     void Update()

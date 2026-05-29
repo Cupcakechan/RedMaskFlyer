@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1510849801364583359}
   - component: {fileID: 6046969325190080736}
   - component: {fileID: 834276381126224116}
-  - component: {fileID: 5175630422118173696}
   - component: {fileID: 7748300712303192766}
   - component: {fileID: -2439159324910272283}
   m_Layer: 0
@@ -87,7 +86,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5913761896655798232, guid: 102332873b55df44cad83312365ebc2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.625, y: 2.75}
@@ -117,20 +116,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5175630422118173696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769239339260699873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a609759119334b44a6bebedb9e45f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  extraSpeed: 3
-  despawnX: -12
 --- !u!61 &7748300712303192766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -191,7 +176,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GoblinArcher
   pauseDuration: 0.9
   arrowCount: 3
-  arrowSpacing: 0.25
-  despawnDelay: 0.6
-  arrowPool: {fileID: 0}
-  arrowSpawnOffset: {x: 0.4, y: 0}
+  arrowSpacing: 0.5
+  despawnDelay: 0.8
+  arrowSpawnOffset: {x: 0.4, y: 0.75}
