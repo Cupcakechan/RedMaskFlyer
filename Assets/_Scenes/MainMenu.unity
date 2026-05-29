@@ -749,7 +749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 1, y: 59.24}
+  m_AnchoredPosition: {x: 1, y: 59.240005}
   m_SizeDelta: {x: 268.87, y: 69.85}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &883017601
@@ -795,7 +795,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 883017602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1561196950}
+        m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
+        m_MethodName: OnCloseHowToPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &883017602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,7 +1308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1355511223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2249,7 +2261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuUI
   bestScoreText: {fileID: 1483280752}
-  howToPlayPanel: {fileID: 0}
+  howToPlayPanel: {fileID: 1355511222}
 --- !u!1 &1691910990
 GameObject:
   m_ObjectHideFlags: 0
