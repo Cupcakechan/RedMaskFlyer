@@ -3,12 +3,19 @@ using UnityEngine;
 [System.Serializable]
 public class BiomeData
 {
-    [Tooltip("Display name (used for debug logs and future transition UI).")]
     public string biomeName;
 
-    [Tooltip("Static hazards active while this biome plays. Walker/flyer enemies are biome-agnostic.")]
+    [Header("Hazards")]
     public HazardSpawner.SpawnEntry[] entries;
 
-    [Tooltip("The tile sprite the scrolling ground uses while this biome is active.")]
+    [Header("Ground")]
     public Sprite groundSprite;
+
+    [Header("Background / Parallax")]
+    [Tooltip("Camera background color (the sky) for this biome.")]
+    public Color skyColor = Color.black;
+    [Tooltip("Far (slow) parallax cloud sprite.")]
+    public Sprite parallaxFarSprite;
+    [Tooltip("Near (faster) parallax cloud sprite.")]
+    public Sprite parallaxNearSprite;
 }
