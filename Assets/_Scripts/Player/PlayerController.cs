@@ -19,13 +19,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.12f;
     [SerializeField] private LayerMask groundLayer;
 
-    [Header("Tilt (visual flight feel)")]
+   [Header("Tilt (visual flight feel)")]
     [SerializeField] private float maxTiltUp = 18f;     // nose-up degrees while rising
     [SerializeField] private float maxTiltDown = 24f;   // nose-down degrees while falling
     [SerializeField] private float tiltLerpSpeed = 8f;  // how quickly the tilt eases toward target
 
-    private Rigidbody2D rb;
-    private Animator animator;
+    [Header("Flight FX")]
+    [SerializeField] private ParticleSystem flightParticles;  // sparkle trail, emits while flying
+
+    private Rigidbody2D rb;    private Animator animator;
 
     public static PlayerController Instance { get; private set; }
    private bool isGrounded;
@@ -39,11 +41,12 @@ public class PlayerController : MonoBehaviour
         Instance = this;
     }
 
-    void Update()
+   void Update()
     {
         ReadInput();
         UpdateAnimation();
         UpdateTilt();
+        UpdateFlightFX();
     }
 
     void FixedUpdate()
@@ -119,5 +122,21 @@ public class PlayerController : MonoBehaviour
 
         float angle = Mathf.LerpAngle(transform.eulerAngles.z, target, tiltLerpSpeed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
+
+    void UpdateFlightFX()
+    {
+        if (flightParticles == null) return;
+        var emission = flightParticles.emission;
+        emission.enabled = flyHeld;   // sparkle only while channeling flight
+    }
+
+    // Stops the trail cleanly when the controller is disabled (e.g. on death) so it
+    // doesn't keep puffing sparks through the death animation.
+    void OnDisable()
+    {
+        if (flightParticles == null) return;
+        var emission = flightParticles.emission;
+        emission.enabled = false;
     }
 }
