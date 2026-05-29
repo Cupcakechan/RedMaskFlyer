@@ -7,8 +7,9 @@ public class MainMenuUI : MonoBehaviour
     [Header("Best Score")]
     [SerializeField] private TextMeshProUGUI bestScoreText;
 
-    [Header("How To Play")]
+    [Header("Panels")]
     [SerializeField] private GameObject howToPlayPanel;
+    [SerializeField] private GameObject highScorePanel;
 
     void Start()
     {
@@ -16,26 +17,17 @@ public class MainMenuUI : MonoBehaviour
         if (bestScoreText != null)
             bestScoreText.text = "BEST: " + best + " m";
 
-        // Always start with the overlay hidden, no matter how it was left in the editor.
-        if (howToPlayPanel != null)
-            howToPlayPanel.SetActive(false);
+        if (howToPlayPanel != null) howToPlayPanel.SetActive(false);
+        if (highScorePanel != null) highScorePanel.SetActive(false);
     }
 
     public void OnStartRun() => SceneManager.LoadScene("Gameplay");
 
-    public void OnHowToPlay()
-    {
-        if (howToPlayPanel != null)
-            howToPlayPanel.SetActive(true);
-    }
+    public void OnHowToPlay()      { if (howToPlayPanel != null) howToPlayPanel.SetActive(true); }
+    public void OnCloseHowToPlay() { if (howToPlayPanel != null) howToPlayPanel.SetActive(false); }
 
-    public void OnCloseHowToPlay()
-    {
-        if (howToPlayPanel != null)
-            howToPlayPanel.SetActive(false);
-    }
-
-    public void OnHighScore() => Debug.Log("High Score clicked");
+    public void OnHighScore()      { if (highScorePanel != null) highScorePanel.SetActive(true); }
+    public void OnCloseHighScore() { if (highScorePanel != null) highScorePanel.SetActive(false); }
 
     public void OnQuit()
     {
