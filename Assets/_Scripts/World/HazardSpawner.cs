@@ -31,10 +31,12 @@ public class HazardSpawner : MonoBehaviour
     [Header("Spawn Entries")]
     [SerializeField] private SpawnEntry[] entries;
 
-    [Header("Timing")]
+   [Header("Timing")]
     [SerializeField] private float spawnX = 11f;
     [SerializeField] private float minInterval = 1.5f;
     [SerializeField] private float maxInterval = 3f;
+    [Tooltip("Spawn interval never drops below this, even at max difficulty.")]
+    [SerializeField] private float minSpawnFloor = 0.4f;
 
     [Header("Flying Warning (only used if entries have isFlying = true)")]
     [SerializeField] private GameObject warningInstance;
@@ -62,9 +64,11 @@ public class HazardSpawner : MonoBehaviour
         }
     }
 
-    void ScheduleNext()
+   void ScheduleNext()
     {
-        nextSpawn = Random.Range(minInterval, maxInterval);
+        float mult = (DifficultyManager.Instance != null) ? DifficultyManager.Instance.SpawnRateMultiplier() : 1f;
+        float interval = Random.Range(minInterval, maxInterval) / Mathf.Max(0.01f, mult);
+        nextSpawn = Mathf.Max(minSpawnFloor, interval);
     }
 
     void Spawn()
