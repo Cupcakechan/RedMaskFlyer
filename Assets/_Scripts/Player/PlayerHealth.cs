@@ -120,6 +120,9 @@ public class PlayerHealth : MonoBehaviour
         int meters = (ScoreManager.Instance != null) ? ScoreManager.Instance.GetMeters() : 0;
         RunData.LastScore = meters;
 
+        // Bank this run's coins into the persistent wallet (B1: one save, at death).
+        if (CoinManager.Instance != null) CoinManager.Instance.Bank();
+
         StartCoroutine(GoToGameOver());
     }
 

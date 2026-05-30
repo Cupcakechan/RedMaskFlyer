@@ -13,12 +13,15 @@ public class GameOverUI : MonoBehaviour
     [SerializeField] private TMP_InputField initialsInput;
     [SerializeField] private TextMeshProUGUI resultText;     // shown after a qualifying submit
 
+    [SerializeField] private TextMeshProUGUI coinsText;
     private int lastScore;
     private bool submitted;
 
     void Start()
     {
         lastScore = RunData.LastScore;
+
+        if (coinsText != null) coinsText.text = "COINS +" + RunData.CoinsThisRun;
 
         if (distanceText != null) distanceText.text = "DISTANCE: " + lastScore + " m";
         RefreshBest();
