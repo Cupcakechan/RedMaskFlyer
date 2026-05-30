@@ -2150,10 +2150,12 @@ MonoBehaviour:
     displayName: Red Mask
     price: 0
     previewSprite: {fileID: 8557022296289031752, guid: a9abad8d42842ea42901d0f98c6c61d2, type: 3}
+    inGameVisual: {fileID: 0}
   - id: shadow
     displayName: Horned Hero
     price: 50
     previewSprite: {fileID: 7634636879192196849, guid: ee915c495bcb890438967bc5f5072058, type: 3}
+    inGameVisual: {fileID: 22100000, guid: 01aed1af6c4414742be917628692fd72, type: 2}
 --- !u!4 &505659245
 Transform:
   m_ObjectHideFlags: 0

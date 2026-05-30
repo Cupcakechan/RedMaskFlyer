@@ -7,7 +7,7 @@ public class Character
     public string displayName;    // shown in the shop
     public int price;             // 0 for the default hero
     public Sprite previewSprite;  // shop preview image
-    // (Sub-step 3 will add an in-game visual reference here.)
+    public AnimatorOverrideController inGameVisual;  // leave empty for the default hero (uses base controller)
 }
 
 public class CharacterManager : MonoBehaviour

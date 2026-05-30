@@ -1696,6 +1696,7 @@ GameObject:
   - component: {fileID: 636884096}
   - component: {fileID: 636884095}
   - component: {fileID: 636884098}
+  - component: {fileID: 636884099}
   m_Layer: 0
   m_Name: Red Mask Flyer
   m_TagString: Untagged
@@ -1915,6 +1916,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 21182d65bee64c148aa76e6e94d542ef, type: 3}
   - {fileID: 21300000, guid: e62bcdc2ce7e1b741844bb7496f07d79, type: 3}
   - {fileID: 21300000, guid: 86aa7477e694c774fa3aeecf13f1406b, type: 3}
+--- !u!114 &636884099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636884091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc696d06a83941740bf0cebd439f9198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacterApplier
 --- !u!1 &639348160
 GameObject:
   m_ObjectHideFlags: 0
@@ -8449,7 +8462,7 @@ MonoBehaviour:
   coinPool: {fileID: 1280941791}
   minInterval: 1.2
   maxInterval: 2.8
-  minY: -2
+  minY: -4.02
   maxY: 3.5
   spawnX: 11
 --- !u!114 &1280941791
